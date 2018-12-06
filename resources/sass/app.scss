@@ -1,0 +1,70 @@
+// Variables
+@import 'variables';
+
+html, body {
+  font-family: 'Nunito', sans-serif;
+  background-image: url('/images/bg.jpg');
+  background-size: cover;
+  color: #636b6f;
+  font-weight: 200;
+  height: 100vh;
+  margin: 0;
+  -webkit-text-size-adjust: none;
+}
+#app{
+  height: 100vh;
+}
+main {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  width: 90%;
+}
+
+.navbar {
+  overflow: hidden;
+  top: 0;
+  width: 100%;
+  min-width: 300px;
+  ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    .left {
+      float: left;
+    }
+    .right {
+      float: right;
+    }
+    .links > a {
+      color:dimgrey;
+      padding: 0 25px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: .1rem;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+  }
+}
+
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+
+@media (max-width: 1024px) {
+  html, body {
+    background-image: url('/images/bg.png');
+  }
+  .navbar ul .links > a {
+    padding: 0 5px;
+    font-size: 10px;
+    font-weight: 400;
+    color: #fff;
+  }
+  #card{
+    transform: scale(0.8); 
+  }
+}
