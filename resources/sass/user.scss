@@ -1,0 +1,129 @@
+// Variables
+@import 'variables';
+
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700");
+$maxInterval: 250px;
+$minInterval: 65px;
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    background: #323639;
+    
+    color: #fff;
+    font-weight: 400;
+}
+
+#app{
+    height: 100vh;
+    display: flex;
+    flex-flow:column nowrap;
+    background-image: url('/images/bg.jpg');
+    background-size: cover;
+    a {
+        color: #fff;
+        text-decoration: none;
+        transition: all 0.3s;
+        &:hover, &:focus {
+          color: inherit;
+          text-decoration: none;
+          transition: all 0.3s;
+        }
+      }
+    .topnav{
+        background: #32363956;
+        display: flex;
+        justify-content: space-between;
+        align-items:center;
+        padding: 5px 30px;
+        strong {
+            vertical-align: -webkit-baseline-middle;
+            font-weight: 800;
+        }
+    }
+    .wrapper{
+        display: flex;
+        flex-flow:row wrap;
+        flex: 2;
+        margin: 0;
+        padding: 0;
+        #sidebar {
+            width: $maxInterval;
+            background: rgba(85, 85, 85, 0.5);
+            font-size: 16px;
+            &.active {
+                width: $minInterval;
+                text-align: center;
+                font-size: 14px;
+                .icon {
+                    justify-content: center;
+                    align-items:center;
+                    strong { display: none; }
+                }
+                ul {
+                    li a {
+                            padding: 20px 10px;
+                            text-align: center;
+                            font-size: 0.85em;
+                        i {
+                            margin-right: 0;
+                            display: block;
+                            font-size: 1.8em;
+                            margin-bottom: 5px;
+                        }
+                    }
+                    ul a {
+                        padding: 10px !important;
+                    }
+                }
+            }
+            .icon {
+                padding: 10px 20px;
+                display: flex;
+                justify-content: space-between;
+                align-items:center;
+                i {
+                    cursor: pointer;
+                }
+            }
+            ul {
+                &.components {
+                    padding: 0 0 10px;
+                }
+                li {
+                    a {
+                        padding: 10px;
+                        font-size: 1.1em;
+                        display: block;
+                        &:hover {
+                            color: #323639e0;
+                            background: #fff;
+                        }
+                        i {
+                            margin-right: 10px;
+                        }
+                    }
+                    &.active > a {
+                        color: #fff;
+                        background: #6d7fcc;
+                    }
+                }
+            }
+            
+        }
+        #content {
+            display: flex;
+            flex: 2;
+            padding: 0;
+            margin: 0;
+            #container {
+                width: 100%;
+                padding: 10px;
+                overflow: auto;
+            }
+        }
+    }
+}
+

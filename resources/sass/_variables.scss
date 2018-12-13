@@ -4,6 +4,12 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
+// Adding Font Awesome
+@import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "~@fortawesome/fontawesome-free/scss/solid.scss";
+@import "~@fortawesome/fontawesome-free/scss/brands.scss";
+$fa-font-path: "../webfonts";
+
 // Body
 $body-bg: #f8fafc;
 

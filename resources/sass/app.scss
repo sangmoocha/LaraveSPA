@@ -11,10 +11,12 @@ html, body {
   margin: 0;
   -webkit-text-size-adjust: none;
 }
+
 #app{
   height: 100vh;
 }
-main {
+
+.container {
   position: absolute;
   transform: translate(-50%, -50%);
   top: 50%;
@@ -22,16 +24,20 @@ main {
   width: 90%;
 }
 
+.loginBtn {
+  font-size: 150%;
+}
+
 .navbar {
   overflow: hidden;
   top: 0;
   width: 100%;
   min-width: 300px;
+  max-height: 50px; 
   ul{
     list-style-type: none;
     margin: 0;
     padding: 0;
-    width: 100vw;
     .left {
       float: left;
     }
@@ -41,11 +47,14 @@ main {
     .links > a {
       color:dimgrey;
       padding: 0 25px;
-      font-size: 12px;
+      font-size: 1rem;
       font-weight: 600;
       letter-spacing: .1rem;
       text-decoration: none;
       text-transform: uppercase;
+    }
+    .links > a:hover {
+      color: orangered;
     }
   }
 }
@@ -64,7 +73,7 @@ main {
     font-weight: 400;
     color: #fff;
   }
-  #card{
-    transform: scale(0.8); 
+  div.col-md-7 {
+    min-width: 80vw;
   }
 }

@@ -16,6 +16,7 @@
 
 <script>
     export default {
+        name: Hoem,
         mounted() {
             console.log('Component mounted.')
         }
