@@ -23,27 +23,32 @@
     <div class="topnav">
         <div class="navbrand">
             <a  href="/">
-                <img src="/images/icon.png" width="30" height="30" alt="">
-                <strong> {{ __('심심한 하루') }} </strong>        
+                <img src="/images/icon.png" width="25" height="25" alt="">
+                <strong class="align-middle"> {{ __('심심한 하루') }} </strong>        
             </a>
         </div>
         <div class="navMenu">
-            <a href="{{ route('logout') }}"
-                onclick="event.preventDefault();
-                document.getElementById('logout-form').submit();">
-                <i class="fas fa-sign-out-alt"></i>
-                {{ __('Logout') }}
-            </a>
-            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                @csrf
-            </form>
+            <ul>
+                <li><a href="#"><img src="/images/play.png" width="25" height="25" alt="Music Play"></a></li>
+                <li class="ml-3">
+                    <a  href="{{ route('logout') }}"
+                        onclick="event.preventDefault();
+                        document.getElementById('logout-form').submit();">
+                        <img src="/images/logout-sketch.png" width="25" height="25" alt="Logout">
+                        {{-- {{ __('Logout') }} --}}
+                    </a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        @csrf
+                    </form>
+                </li>
+            </ul>
         </div>
     </div>
     <div class="wrapper">
         <nav id="sidebar">
             <div class="icon">
                 <strong> <a href="/home">{{ Auth::user()->name }}</a> </strong>
-                <i class="fas fa-bars fa-2x" id="sidebarCollapse"></i>
+                <i class="fas fa-bars" id="sidebarCollapse"></i>
             </div>
             <ul class="list-unstyled components">   
                 <li>

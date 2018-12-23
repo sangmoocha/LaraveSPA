@@ -33,7 +33,7 @@
                             <a href="{{ route('logout') }}"
                                onclick="event.preventDefault();
                                document.getElementById('logout-form').submit();">
-                                {{ __('로그아웃') }}
+                                <img src="/images/logout-sketch.png" width="30" height="30" alt="Logout">
                             </a>
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                 @csrf
